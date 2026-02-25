@@ -330,6 +330,7 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
 .sticker-red {
   top: -10%;
   left: 0;
+  --rot: -6deg;
   transform: rotate(-6deg);
   animation-delay: 0s;
 }
@@ -345,6 +346,7 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
 .sticker-purple {
   top: -15%;
   right: 0;
+  --rot: 4deg;
   transform: rotate(4deg);
   animation-delay: 1.5s;
 }
@@ -411,12 +413,14 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
 @media (max-width: 992px) {
   .sticker-red {
     left: -5%;
-    transform: scale(0.8) rotate(-6deg);
+    --rot: -6deg;
+    zoom: 0.8;
   }
 
   .sticker-purple {
     right: -5%;
-    transform: scale(0.8) rotate(4deg);
+    --rot: 4deg;
+    zoom: 0.8;
   }
 
   .mockup-img {
@@ -466,19 +470,39 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
     margin-top: 20px;
   }
 
+  .floating-sticker {
+    transform: none !important;
+  }
+
   .sticker-red {
     top: -120px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.7) rotate(-4deg);
-    margin-left: -60px;
+    left: 2%;
+    margin-left: 0;
+    max-width: 85vw;
+    --rot: -4deg;
   }
 
   .sticker-purple {
     top: -60px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.8) rotate(4deg);
-    margin-left: 60px;
-    right: auto;
+    right: 2%;
+    left: auto;
+    margin-left: 0;
+    max-width: 85vw;
+    --rot: 4deg;
+  }
+
+  .sticker-content {
+    white-space: normal;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 1.25rem;
+  }
+
+  .sticker-title {
+    white-space: normal;
+    text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: -12px;
   }
 
   .logo-container img {
@@ -494,8 +518,20 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
 
   .sticker-purple {
     top: -80px;
-    margin-left: 0;
-    transform: translateX(-50%) scale(0.7);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    --rot: 4deg;
+    width: max-content;
+    max-width: 90vw;
+  }
+
+  .sticker-purple .sticker-content {
+    font-size: 1.3rem;
+    padding: 12px 16px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .mockup-section {
