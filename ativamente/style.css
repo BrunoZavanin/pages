@@ -1111,6 +1111,8 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
   overflow: hidden;
   position: relative;
   margin-bottom: 80px;
+  padding-top: 40px;
+  /* Espaço para as tags não serem cortadas */
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -1167,13 +1169,14 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
 
 @media (max-width: 768px) {
   .carousel-tag {
-    z-index: 20;
-    top: -5px;
-    /* Ajuste fino para mobile */
+    z-index: 50 !important;
+    top: -15px !important;
+    font-size: 0.85rem;
   }
 
   .carousel-img-wrapper {
     z-index: 1;
+    position: relative;
   }
 }
 
