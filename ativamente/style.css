@@ -1153,7 +1153,8 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 15;
+  /* Aumentado para garantir visibilidade */
   font-family: var(--font-headline);
   font-weight: 700;
   font-size: 0.95rem;
@@ -1162,6 +1163,18 @@ com a cor de fundo do site (funciona bem em fundos escuros) */
   color: white;
   white-space: nowrap;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .carousel-tag {
+    z-index: 20;
+    top: -5px;
+    /* Ajuste fino para mobile */
+  }
+
+  .carousel-img-wrapper {
+    z-index: 1;
+  }
 }
 
 .carousel-img-wrapper {
